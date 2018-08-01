@@ -1,6 +1,0 @@
-*.swp
-*.swo
-node_modules
-bower_components
-.idea/
-npm-debug.log
