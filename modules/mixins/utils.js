@@ -6,9 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 var pushHash = function pushHash(hash) {
   hash = hash ? hash.indexOf('#') === 0 ? hash : '#' + hash : '';
 
-  if (history.pushState) {
+  if (history.replaceState) {
     var loc = window.location;
-    history.pushState(null, null, hash ? loc.pathname + loc.search + hash
+    history.replaceState(null, null, hash ? loc.pathname + loc.search + hash
     // remove hash
     : loc.pathname + loc.search);
   } else {
